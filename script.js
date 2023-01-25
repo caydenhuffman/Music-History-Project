@@ -8,7 +8,7 @@ Highcharts.setOptions({
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    Highcharts.chart('container', {
+    Highcharts.chart('evermoreChart', {
         chart: {
             type: 'line',
             zooming: {
@@ -16,7 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         title: {
-            text: '<i>evermore chart</i>'
+            text: '<i>evermore chart</i>',
+            style: {
+                color: '#996e42'
+            }
         },
         xAxis: {
             type: 'datetime'
