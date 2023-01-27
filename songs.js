@@ -21,11 +21,19 @@ class Song {
     trackListing() {
         return this.track + ". " + this.title + " (" + this.mins + ":" + this.getSecs() + ")"
     }
-    getSecs(){
-        if(this.secs > 9){
-            return this.secs; 
+    getSecs() {
+        if (this.secs > 9) {
+            return this.secs;
         }
-        return "0" + this.secs; 
+        return "0" + this.secs;
+    }
+    randomTime() {
+        let temp = Math.floor(Math.random() * (60 * this.mins + this.secs));
+        if((temp % 60) > 9  ){
+        return Math.floor(temp / 60)  + ":"+ (temp % 60) ; 
+        }
+        return Math.floor(temp / 60)  + ":0"+ (temp % 60) ; 
+
     }
     //Could format toString, to give us the HTML DOM stuff for styling. 
 }
@@ -293,10 +301,14 @@ function randomizeButton() {
         <td><span class="${songs[al].classId}Title" style="font-size: 140%;">${songs[al].title}</span><br>Album</td>
         <td><span class="${songs[al].classId}"> ${songs[al][so].mins}:${songs[al][so].getSecs()}</span><br>duration</td>
     </tr>
+    <tr>
+    <td><span class="${songs[al].classId}">${so}</span> <br>track</td>
+    <td><span class="${songs[al].classId}">${songs[al][so].randomTime()}</span><br>random time</td>
+    </tr>
     </table>
     `;
     // document.getElementById("output").innerHTML =  `<p class="${songs[al].classId}">`+ songs[al][Math.floor(Math.random() * songs[al].length) + 1] + "</p>";
-    // printAlbums(al); //this prints out the entire album. 
+    // printAlbums(8); //this prints out the entire album. 
 }
 
 // <tr>
@@ -312,6 +324,6 @@ function printAlbums(album) {
     document.getElementById("output").innerHTML = str + "</div>";
     // return str + "</div>";
 
-    
+
 }
 

@@ -24,7 +24,7 @@ td {
     border-radius: 20px;
     width: 50%;
     height: 70px;
-    /* background-color: rgba(128, 128, 128, .5); */
+    background-color: rgb(254, 179, 224, 0.5);
 }
 
 button {
@@ -148,6 +148,7 @@ button:hover {
     font-family: "kepler";
     text-transform: uppercase;
     color: black;
+    font-weight: bolder;
     /* font-weight: bold; */
 }
 

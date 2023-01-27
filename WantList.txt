@@ -10,3 +10,11 @@ Album           duration
 
 Fix: 
 Return 0X for seconds less than 10. 
+
+Find some way to make a guessing game for taylor swift lyrics. So it like shows lyrics and stuff. 
+
+Features:
+1) Lyrics
+2) Matching Game. 
+3) Guess Which song came first. 
+4) Guess Which Album A Song is From. 
